@@ -18,11 +18,13 @@ namespace myTiles {
     export const tile7 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
     export const tile8 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile9 = image.ofBuffer(hex``);
 
     helpers._registerFactory("tilemap", function(name: string) {
         switch(helpers.stringTrim(name)) {
             case "level1":
-            case "level1":return tiles.createTilemap(hex`1000100000000000000005030407000000000000000000000000060101080000000009000000090000000000000000000000000000000000000000090000090000000000000000000900000000000000000009000000000000000000090000000000000000090000000000000000090000000900000000000009000000000000000000000900000000000000000000000000000000000009000000000200000009000009000000000000000000000000000000000009000000090000000009000000000000000000000000000000000000000900000000000000000009000900000000000000090000090000000000000000000000000000000000000900000000000900`, img`
+            case "level1":return tiles.createTilemap(hex`100010000000000000000503040700000000000000000000000006010108000000000900000009000000000000000000000000000000000000000009000009000000000000000000090000000000000000000900000000000000000009000000000000000009000000000000000009000000090000000000000900000000000000000000090000000000000000000000000000000000000900000000020000000900000900000000000000000a000000000000000009000000090000000009000000000000000000000000000000000000000900000000000000000009000900000000000000090000090000000000000000000000000000000000000900000000000900`, img`
 . . . . . . 2 . . 2 . . . . . . 
 . . . . . . 2 2 2 2 . . . . . . 
 . . . . . . . . . . . . . . . . 
@@ -39,7 +41,7 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
-`, [myTiles.transparency16,sprites.dungeon.stairSouth,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8], TileScale.Sixteen);
+`, [myTiles.transparency16,sprites.dungeon.stairSouth,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9], TileScale.Sixteen);
         }
         return null;
     })
@@ -63,6 +65,8 @@ namespace myTiles {
             case "tile7":return tile7;
             case "myTile6":
             case "tile8":return tile8;
+            case "myTile7":
+            case "tile9":return tile9;
         }
         return null;
     })
